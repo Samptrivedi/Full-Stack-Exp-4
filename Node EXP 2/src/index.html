@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Card API</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #0056b3; }
+        code { background-color: #eee; padding: 2px 6px; border-radius: 4px; font-family: "Courier New", Courier, monospace; }
+        .endpoint { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
+        .method { font-weight: bold; color: #fff; padding: 3px 8px; border-radius: 3px; display: inline-block; margin-right: 10px; }
+        .get { background-color: #28a745; }
+        .post { background-color: #007bff; }
+        .delete { background-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playing Card Collection API</h1>
+        <p>This is a simple RESTful API for managing a collection of playing cards. Use an API client like Postman or Insomnia to test the endpoints.</p>
+        
+        <div class="endpoint">
+            <h4><span class="method get">GET</span> <code>/cards</code></h4>
+            <p>Retrieves a list of all cards in the collection.</p>
+        </div>
+
+        <div class="endpoint">
+            <h4><span class="method get">GET</span> <code>/cards/:id</code></h4>
+            <p>Retrieves a single card by its unique ID. Example: <code>/cards/1</code></p>
+        </div>
+
+        <div class="endpoint">
+            <h4><span class="method post">POST</span> <code>/cards</code></h4>
+            <p>Adds a new card to the collection. The request body must be JSON and contain <code>suit</code> and <code>value</code> properties.</p>
+            <p>Example Body: <code>{ "suit": "Clubs", "value": "Jack" }</code></p>
+        </div>
+
+        <div class="endpoint">
+            <h4><span class="method delete">DELETE</span> <code>/cards/:id</code></h4>
+            <p>Deletes a card from the collection by its unique ID. Example: <code>/cards/2</code></p>
+        </div>
+    </div>
+</body>
+</html>
